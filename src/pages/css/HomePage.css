@@ -1,56 +1,74 @@
-.body{
-
+/* 공통 애니메이션 정의 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+/* 초기 상태에서 보이지 않도록 설정 */
+.Homepage_Mainimage,
+.CM_content,
+.CM_content2,
+.Homepage_introduce {
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* 요소가 보이도록 설정 */
+.Homepage_Mainimage.visible,
+.CM_content.visible,
+.CM_content2.visible,
+.Homepage_introduce.visible {
+    opacity: 1;
+    animation: fadeIn 1s forwards;
+}
+
+/* 홈 페이지 기본 스타일 */
 .Homepage {
-    padding-top: 200px;
-    width: 1920px;
-    height: 1080px;
-
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden; /* 수평 스크롤바를 없애기 위해 추가 */
 }
 
-.Homepage_Mainimage{
-
+/* 메인 이미지 섹션 */
+.Homepage_Mainimage {
     background-image: url("../../img/coupleshare_mainimg.jpg");
     background-size: cover;
-
     background-repeat: no-repeat;
-    background-position: 50% 0%;
+    background-position: center;
     text-align: center;
-    align-content: center;
-    font-size: 7.2rem;
-    height: 70rem;
     color: white;
-
-
+    font-size: 7.2rem;
+    height: 100vh; /* 화면 전체 높이를 차지하도록 설정 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
 }
 
+/* 소개 섹션 */
+.Homepage_introduce {
+    background-image: url("../../img/coupleshare_mainimg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
-
-.Homepage_introduce{
     text-align: center;
     align-content: center;
     font-size: 4rem;
     background-color: #7469b6;
-    height: 30rem;
-    width:1920px;
+    height: 50vh; /* 화면 전체 높이를 차지하도록 설정 */
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.Couplepage_createbutton{
-    border:white solid 2px;
-    background-color:rgba(0,0,0,0.1);
-    width:20rem;
-    height:5rem;
-    cursor: pointer;
-}
-.Couplepage_createbutton:hover{
-    background-color:rgba(0,0,0,0.3);
-}
-.Couplepage_createbutton a{
-    text-decoration-line: none;
-    color:white;
-    font-size: 1.3rem;
-}
+/* 메인 박스 레이아웃 */
 .Homepage_flex {
     display: flex;
     flex-direction: column;
@@ -59,14 +77,51 @@
     padding-top: 20px;
 }
 
-
-.Homepage_flex1, .Homepage_flex2 {
-    position: relative; /* 기본 위치 설정 */
-    z-index: 1; /* 사이드바보다 낮게 설정 */
-}
-
-.Homepage_mainbox{
+/* 메인 박스 스타일 */
+.Homepage_mainbox {
     display: flex;
     justify-content: center;
+    margin-top: 12rem;
 }
 
+/* CM_content 스타일 */
+.CM_content {
+    background-image: url("../../img/couplehand.jpg");
+    background-size: cover;
+    width: 30rem;
+    height: 30rem;
+}
+
+/* CM_content2 스타일 */
+.CM_content2 {
+    background-image: url("../../img/testimg1.jpg");
+    background-size: cover;
+    width: 30rem;
+    height: 30rem;
+}
+
+/* 버튼 스타일 */
+.Couplepage_createbutton {
+    border: white solid 2px;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 20rem;
+    height: 5rem;
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+
+.Couplepage_createbutton:hover {
+    background-color: white;
+
+}
+.Couplepage_createbutton:hover a{
+    color: black;
+}
+
+
+.Couplepage_createbutton a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+}

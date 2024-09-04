@@ -2,10 +2,10 @@
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    border: 2px solid black;
+    border: none;
 
-    width: 300px;
-    height: 300px;
+    width: 480px;
+    height: 480px;
     text-align: center;
     align-content: center;
     margin-bottom: 2rem;
@@ -17,8 +17,8 @@
     transform: translateY(0);
 }
 .mainboxbutton{
-    border:white solid 2px;
-    background-color:rgba(0,0,0,0.1);
+    border:black solid 2px;
+    background-color:white;
     width:10rem;
     height:3rem;
 
@@ -26,11 +26,16 @@
 }
 .mainboxbutton:hover{
     cursor:pointer;
-    background-color:rgba(0,0,0,0.3);
+    border: none;
+    background-color:#000000;
  }
+
+.mainboxbutton:hover a{
+    color:white
+}
 .mainboxbutton a{
     text-decoration-line: none;
-    color:white;
+    color:black;
     font-size: 1.3rem;
 }
 
