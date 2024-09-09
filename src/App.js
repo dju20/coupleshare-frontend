@@ -6,8 +6,10 @@ import FindID from "./pages/page/FindID";
 import HomePage from './pages/page/HomePage';
 import MyPage from "./pages/page/mypage";
 import CoupleMatching from "./pages/page/CoupleMatching";
+import CoupleMatched from "./pages/page/CoupleMatched";
 import RedirectPage from "./pages/page/RedirectPage";
 import CouplePage from "./pages/page/CouplePage";
+
 
 // 마이페이지 컴포넌트
 
@@ -23,8 +25,9 @@ const App = () => (
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/FindID" element={<FindID/>}/>
                 <Route path="/CoupleMatching" element={<CoupleMatching/>}/>
+                <Route path="/CoupleMatched" element={<CoupleMatched/>}/>
                 <Route path="/redirect" element={<RedirectPage/>} />
-                <Route path="/couples/:coupleId" element={<CouplePage />} />
+                <Route path="/couples/:coupleId" element={<CouplePage/>} />
                 {/*<Route path="/FindPW" element={<FindPW />} />*/}
             </Routes>
         </div>

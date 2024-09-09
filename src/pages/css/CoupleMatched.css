@@ -1,0 +1,75 @@
+.CMn-container {
+    background-image: url("../../img/Back-WS.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    width: 100vw;
+    height: 100vh;
+}
+
+.CMn-SubContainer {
+    background-image: url("../../img/Back-BH.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 700px 700px;
+    width: 100%;
+    height: 115%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.CMn-celebration-message {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.CMn-celebration-message h1 {
+    font-size: 2rem;
+    color: #000000;
+}
+
+.CMn-profiles {
+    display: flex;
+    justify-content: space-between; /* 좌우로 균등하게 배치 */
+    align-items: center;
+    width: 80%;
+    max-width: 1200px; /* 최대 너비 설정 */
+}
+
+.CMn-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    width: 40%; /* 두 프로필이 각각 화면의 40% 너비를 차지하도록 설정 */
+}
+
+.CMn-profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.CMn-profile h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.CMn-profile-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.CMn-profile-button:hover {
+    background-color: #0056b3;
+}
